@@ -46,7 +46,7 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
             separator = ":";
             roles.append(role);
         }
-        return request.mutate().header("USER_DETAILS", userDetails.getUsername())
+        return request.mutate().header("USER_NAME", userDetails.getUsername())
                 .header("USER_ROLES", roles.toString()).build();
     }
 
